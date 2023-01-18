@@ -14,16 +14,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         academyTableView.dataSource = self
+        academyTableView.delegate = self
         
         academyTableView.register(
           UINib(nibName: "AcademyTableViewCell", bundle: nil), // Isi dengan nama file XIB
           forCellReuseIdentifier: "AcademyCell" // Isi dengan Identifier Cell yang telah ditentukan
         )
+        
+        
     }
 
 
 }
 
+// Membutuhkan academyTableView.dataSource = self pada viewDidLoad
 extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -38,11 +42,30 @@ extension ViewController: UITableViewDataSource{
             let academy = dummyAcademyData[indexPath.row]
             cell.academyLabel.text = academy.name
             cell.academyImageView.image = academy.image
+            cell.academyTagline.text = academy.tagline
           return cell
         } else {
           return UITableViewCell() // Mengembalikan UITableViewCell jika tidak ditemukan.
         }
     }
+}
+
+// Untuk perpindahan layar ke indentifier moveToDetail
+// membutuhkan academyTableView.delegate = self pada viewDidload
+extension ViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      performSegue(withIdentifier: "moveToDetail", sender: dummyAcademyData[indexPath.row])
+  }
     
+    override func prepare(
+      for segue: UIStoryboardSegue,
+      sender: Any?
+    ) {
+      if segue.identifier == "moveToDetail" {
+        if let detaiViewController = segue.destination as? DetailViewController {
+          detaiViewController.academy = sender as? AcademyModel
+        }
+      }
+    }
     
 }

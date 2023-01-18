@@ -53,6 +53,7 @@
             <connections>
                 <outlet property="academyImageView" destination="jGu-bF-dlD" id="Fx0-IQ-iii"/>
                 <outlet property="academyLabel" destination="KuW-wL-GJp" id="KWW-XV-Zed"/>
+                <outlet property="academyTagline" destination="SwM-TE-pad" id="0rE-9o-jTz"/>
             </connections>
             <point key="canvasLocation" x="26.717557251908396" y="60.563380281690144"/>
         </tableViewCell>
