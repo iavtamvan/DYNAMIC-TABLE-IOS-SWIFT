@@ -107,9 +107,9 @@
 		5CEF68542976493C00156034 /* DicodingApps */ = {
 			isa = PBXGroup;
 			children = (
-				5CEF68912976774F00156034 /* view */,
-				5CEF68902976774400156034 /* adapter */,
-				5CEF688F2976770D00156034 /* model */,
+				5CEF68912976774F00156034 /* ViewController */,
+				5CEF68902976774400156034 /* Adapter */,
+				5CEF688F2976770D00156034 /* Model */,
 				5CEF68552976493C00156034 /* AppDelegate.swift */,
 				5CEF68572976493C00156034 /* SceneDelegate.swift */,
 				5CEF685E2976493E00156034 /* Assets.xcassets */,
@@ -136,31 +136,31 @@
 			path = DicodingAppsUITests;
 			sourceTree = "<group>";
 		};
-		5CEF688F2976770D00156034 /* model */ = {
+		5CEF688F2976770D00156034 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				5CEF688529764A2B00156034 /* AcademyModel.swift */,
 			);
-			path = model;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		5CEF68902976774400156034 /* adapter */ = {
+		5CEF68902976774400156034 /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
 				5CEF688B29765DF500156034 /* AcademyTableViewCell.swift */,
 				5CEF688C29765DF500156034 /* AcademyTableViewCell.xib */,
 			);
-			path = adapter;
+			path = Adapter;
 			sourceTree = "<group>";
 		};
-		5CEF68912976774F00156034 /* view */ = {
+		5CEF68912976774F00156034 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				5CEF68592976493C00156034 /* ViewController.swift */,
 				5CEF685B2976493C00156034 /* Main.storyboard */,
 				5CE0267029779221009C9926 /* DetailViewController.swift */,
 			);
-			path = view;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
